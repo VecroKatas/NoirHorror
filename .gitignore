@@ -3,7 +3,12 @@
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
+/[Ll]ogs/
 /Assets/AssetStoreTools*
+
+# Unity logs
+*.log
+compile.log
 /Packages/
 /Docs/
 /Showcase/Unity Imgs/
@@ -35,3 +40,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Claude Context
+.claude/

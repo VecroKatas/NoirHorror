@@ -30,7 +30,7 @@ namespace UnityStandardAssets.CrossPlatformInput
 			}
 			FindPairedButton();
 		}
-
+		
 		void FindPairedButton()
 		{
 			// find the other button witch which this button should be paired

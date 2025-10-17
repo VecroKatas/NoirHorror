@@ -94,7 +94,8 @@ public class MenuInGame : MonoBehaviour
         // if press escape on keyboard and your health is > 0 pause game and show in game menu
         if (Input.GetKeyDown(KeyCode.Escape) && this.gameObject.GetComponent<PlayerBehaviour>().health > 0)
         {
-            MainCanvas.gameObject.transform.Find("InGameMenuPanel").gameObject.active = !MainCanvas.gameObject.transform.Find("InGameMenuPanel").gameObject.active;
+            GameObject inGameMenuPanel = MainCanvas.gameObject.transform.Find("InGameMenuPanel").gameObject;
+            inGameMenuPanel.SetActive(!inGameMenuPanel.activeSelf);
             this.gameObject.GetComponent<PlayerBehaviour>().paused = !this.gameObject.GetComponent<PlayerBehaviour>().paused;
         }
 
@@ -182,7 +183,7 @@ public class MenuInGame : MonoBehaviour
     // UI event
     void OnTextureQualityChange()
     {
-        QualitySettings.masterTextureLimit  = gameSettings.textureQuality = textureQualityDropdown.value;        
+        QualitySettings.globalTextureMipmapLimit  = gameSettings.textureQuality = textureQualityDropdown.value;        
     }
 
     // UI event
